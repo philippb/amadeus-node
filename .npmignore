@@ -1,0 +1,9 @@
+src
+.github
+.babelrc
+.eslintrc.js
+spec
+docs
+test.js
+coverage
+.DS_Store
