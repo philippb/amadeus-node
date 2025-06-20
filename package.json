@@ -1,8 +1,9 @@
 {
   "name": "amadeus",
-  "version": "11.1.0",
+  "version": "11.1.1",
   "description": "Node library for the Amadeus travel APIs",
   "main": "lib/amadeus.js",
+  "types": "amadeus-clean.d.ts",
   "scripts": {
     "prebuild": "npm run lint:src & npm run docs",
     "build": "babel -d lib src/ -s inline",
@@ -61,6 +62,7 @@
     "eslint": "^4.16.0",
     "jest": "^24.8.0",
     "merge": "^2.1.1",
+    "typescript": "^5.8.3",
     "watch": "^1.0.2"
   },
   "dependencies": {
