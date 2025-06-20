@@ -1,13 +1,24 @@
 {
   "name": "amadeus",
-  "version": "11.1.0",
+  "version": "11.1.1",
   "description": "Node library for the Amadeus travel APIs",
   "main": "lib/amadeus.js",
+  "module": "esm/amadeus.js",
+  "exports": {
+    ".": {
+      "import": "./esm/amadeus.js",
+      "require": "./lib/amadeus.js",
+      "types": "./amadeus-clean.d.ts"
+    }
+  },
+  "types": "amadeus-clean.d.ts",
   "scripts": {
     "prebuild": "npm run lint:src & npm run docs",
-    "build": "babel -d lib src/ -s inline",
+    "build": "npm run build:cjs && npm run build:esm",
+    "build:cjs": "babel -d lib src/ -s inline",
+    "build:esm": "BABEL_ENV=esm babel -d esm src/ -s inline",
     "build:watch": "watch 'npm run build' src",
-    "prepublishOnly": "babel -d lib src/ -s inline",
+    "prepublishOnly": "npm run build",
     "pretest": "eslint spec",
     "test": "jest spec --coverage --collectCoverageFrom=src/**/*.js",
     "test:watch": "watch 'npm test' src spec",
@@ -22,7 +33,10 @@
   },
   "jest": {
     "verbose": true,
-    "testEnvironment": "node"
+    "testEnvironment": "node",
+    "transform": {
+      "^.+\\.js$": ["babel-jest", { "presets": [["@babel/preset-env", { "targets": { "node": "current" } }]] }]
+    }
   },
   "repository": {
     "type": "git",
@@ -61,6 +75,7 @@
     "eslint": "^4.16.0",
     "jest": "^24.8.0",
     "merge": "^2.1.1",
+    "typescript": "^5.8.3",
     "watch": "^1.0.2"
   },
   "dependencies": {
