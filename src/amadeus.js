@@ -1,18 +1,18 @@
-import Client        from './amadeus/client';
-import Pagination    from './amadeus/client/pagination';
+import Client        from './amadeus/client.js';
+import Pagination    from './amadeus/client/pagination.js';
 
-import ReferenceData from './amadeus/namespaces/reference_data';
-import Shopping      from './amadeus/namespaces/shopping';
-import Booking       from './amadeus/namespaces/booking';
-import Travel        from './amadeus/namespaces/travel';
-import EReputation   from './amadeus/namespaces/e_reputation';
-import Media         from './amadeus/namespaces/media';
-import Ordering      from './amadeus/namespaces/ordering';
-import Airport       from './amadeus/namespaces/airport';
-import Schedule      from './amadeus/namespaces/schedule';
-import Analytics     from './amadeus/namespaces/analytics';
-import Location      from './amadeus/namespaces/location';
-import Airline       from './amadeus/namespaces/airline';
+import ReferenceData from './amadeus/namespaces/reference_data.js';
+import Shopping      from './amadeus/namespaces/shopping.js';
+import Booking       from './amadeus/namespaces/booking.js';
+import Travel        from './amadeus/namespaces/travel.js';
+import EReputation   from './amadeus/namespaces/e_reputation.js';
+import Media         from './amadeus/namespaces/media.js';
+import Ordering      from './amadeus/namespaces/ordering.js';
+import Airport       from './amadeus/namespaces/airport.js';
+import Schedule      from './amadeus/namespaces/schedule.js';
+import Analytics     from './amadeus/namespaces/analytics.js';
+import Location      from './amadeus/namespaces/location.js';
+import Airline       from './amadeus/namespaces/airline.js';
 
 
 /**

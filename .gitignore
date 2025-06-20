@@ -6,3 +6,6 @@ docs
 .vscode/
 .DS_Store
 package-lock.json
+esm/
+lib/
+.claude/
